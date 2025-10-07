@@ -36,7 +36,8 @@ public class Pigs {
         int playerShift = 1;
         while (player1Points <= pointMax && player2Points <= pointMax) {
 
-
+            //Hvis I tæller fra 0 playerShift = 0; kan I simplificere dette til
+            //System.out.println("Spiller " + (playerShift + 1) + " ruller, tryk enter");
             if (playerShift % 2 == 1) {
                 System.out.println("Spiller 1 ruller, tryk enter");
                 playerXThrows(1);
@@ -59,6 +60,8 @@ public class Pigs {
     }
 
     public static void updatePlayerPoints(int player, int points) {
+        //Hvis I bruger et array til at holde styr på spiller point og tæller fra 0.
+        // playerPoints[player] += points
         if (player == 1) {
             player1Points += points;
         } else if (player == 2) {
@@ -67,6 +70,7 @@ public class Pigs {
 
     }
 
+    //Med de foregående hints kan I lave jeres pigs program om, så det kan håndterer et vilkårligt antal spiller?
     public static void playerXThrows(int player) {
         int roll = 0;
         int sum = 0;
